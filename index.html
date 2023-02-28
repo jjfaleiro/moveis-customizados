@@ -1,0 +1,87 @@
+<!--BIZUS!!!
+SHIFT + SETA = Selicona o texto
+ALT + TEXTO SELICIONADO = Movimenta o texto
+SHIFT + ALT + SETA P/ CIMA OU BAIXO = Cópia linha de código
+&nbsp = Serve para dar espaço (Pórem geralmente não é utilizado em HTML por não se tratar de uma boa prática de programação)-->
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--A tag "rel" significa relation = relação de preconnet = pré-conexão-->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Móveis customizados</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--O atributo "ref" no caso desse Link, significa o CSS dessas fontes-->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Aqui criamos nosso próprio Link para fazer nossas configurações em CSS fuincionarem no HTML, IMPORTANTE!!! observar que já que não possui nenhum protocolo como o "https" o link irá buscas na própria raiz do meu projeto-->
+  </head>
+  <body>
+    <div id="hero">
+      <!--A tag "div" serve para fazer um agrupamento/caixa/container onde vão ser colocadas coisas dentro; quando não se tem exatamente uma tag especifica para um agrupamento, ela é muito utilizada-->
+      <img
+        src="images/img1.jpg"
+        alt="Desenho de uma pessoa vestindo uma camisa amarela em uma sala com lado de móveis"
+      />
+      <!--Vale salientar que o atributo "alt" também é muito importante para o motores de busca dos navegadores porque eles dificilmente conseguem buscar imagens, porém com os textos alternativos, pode fazer com que fique mais facil de localizar sua página pelo navegador utilizado-->
+      <!--Importante também lembra que a disposição das imagens na tela só são feitas através do CSS, porque o HTML só conseguem le-las linha por linha-->
+      <h1>Ambientes <span>únicos</span> para você!</h1>
+      <!--A tag "span" manter o display (exibição) em line = linha, e serve para identificar uma texto/expressao para especifica-la mais posteriormente-->
+      <!--A tag "h" significa = heading = título, ou seja ela é utilizada para introduzir títulos e os números ao lado da tag são para variar os tamanhos deles que vão de (maior) 1 a 6 (menor)-->
+      <p>
+        <!--A tag "p" significa paragraph = parágrafo, ou seja são utilizadas para colocar paragrafos no código-->
+        Nós criamos ambientes <strong>exclusívos</strong> e
+        <strong>únicos</strong>, com muito bom gosto e profissionalismo,
+        investimos tempo e <span>dedicação no seu projeto.</span>
+        <!--A tag "strong" = forte, tem o display em line = linha, que permite colocar um texto em negrito e também serve para especificar no código-->
+
+        <br />
+        <br />
+        <!--A tag "br" = break = quebrar, serve para fazer quebra de linha entre textos; Neste caso já que os dois "p" paragrafos estão em um bloco só!!!, o "br" serve para separa-los, e para que se quebre mais de uma linha é so utilizar a tag mais de uma vez!!!-->
+
+        Tenha <span>ambientes limpos</span> e bem decorados, transmitindo
+        <strong>elegância</strong> e <strong>finesse</strong> para todo aquele
+        que estiver ali.
+      </p>
+    </div>
+
+    <div id="footer">
+      <!--Footer = Rodapé-->
+
+      <div id="line"></div>
+      <!--Ao se digitar "#" + nome de uma "div" e clicar enter, o programa cria uma linhas de codigo "<div id="line"></div>" INTERESSANTE!!!-->
+      <!--ATENÇÃO o atributo "id" não pode ser repetido, além de NÃO ser uma boa pratica pode ocasionar problemas futuros no código
+      Uma alternativa é utilizar o atributo "class" = classe, que pode ser utilizado para identificar varias linhas de código, e evitando o surgimento de problemas no código, e para ESPECIFICAR esta classe no código ao inves de utilizar o # é utilizado o "." (PONTO)-->
+
+      <a target="_blank" href="https://instagram.com/moveisparavoce"
+        >Instagram</a
+      >
+      <!--"href" URL = protocolo https + dominio + continuação do dominio ; + Texto que serve como botam (Instagram)
+      A propriedade "target" = alvo + "_blank" = resulta que ao clicar no botão ao inves de ser redirecionado a uma página nova, que o link seja aberto em uma nova ABA, IMPORTANTE!!!, isto é uma boa prática em programação, pois ao ser redirecionados a uma nova página, os cliente geralmente não retornam a sua página-->
+      <a href="mailto:contato@moveisparavoce.com">Fale conosco</a>
+      <!--"mailto" abre no meu computador o cliente de email que irei utilizar para mandar um email para a empresa-->
+    </div>
+
+    <img
+      id="balls"
+      src="images/balls.svg"
+      alt="Bolinhas laranhadas no canto direito inferior da tela"
+    />
+    <!--A instrução entre aspas significa procura na pasta images a imagem balls em formato svg-->
+    <!--O atributo "alt" = alternativo à imagem, para quando a imagem não estiver disponivel e ou para acessibilidade para pessoas com deficiencia visual onde o atributo será lido-->
+    <!--A tag "img" é uma tag diferente das vistas até agora, pois ela não possui conteúdo interno sendo assim ela fecha nela mesma-->
+    <!--Onde está essa imagem? para isso usamos os source=fonte/origem a localização atraves do atributo (src=""") -->
+    <!--Formatos de imagens
+            "svg" é um formato de imagem para WEB, leve e com uma qualidade muito boa, ele é escrito todo em marcação de texto parecido com HTML 
+            "png" é um formato  de imagem com o fundo transparente ela é um imagem maior
+            "jpg" é um formato de imagem sem o fundo transparente-->
+    <!--ATENÇÃO!!! a disposição de algumas tags na viewport = janela de visualização as vezes é diferente, por exemplo para as tags (h;p;div;img) a disposição delas é em bloco; enquanto para tag (a) é em linha ou seja fica uma do lado da outra, é importante saber disso para organizar seu cógido desde o HTML-->
+  </body>
+</html>

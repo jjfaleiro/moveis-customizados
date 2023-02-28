@@ -1,0 +1,93 @@
+/*BIZUS!!!
+ALT = Selcione um bloco e mantenha o ALT precioando para ver os espaçamento entre os blocos no Figma*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center; /*Alinhamento de texto - center = centro*/
+  margin-top: 0; /*A margin-top dos navagadores por padrão possuem uma margem superior de 8px, sendo assim fica um espaço entre o bloco é o teto da página, para zerar está margem é só colocar a "margin-top do body com o valor 0"*/
+}
+/* Para agrupar varios seletores do código HTML (body-p-a) como descrito acima, quando uma propriedade for em comúm, é só adcionar a "," */
+
+#hero {
+  width: 592px; /*Widht = largura, isto quer dizer que a largura da div/caixa/bloco "hero" é de 592px, porém acaba desconfigurando o alinhamento bloco no centro da página, pórem o alinhamento do texto dentro da caixa se mantém ao centro*/
+  margin: 0 auto 72px; /*Resumindo = 0=margin-top; auto=laterias; 72px=margin-bottom dos blocos dentro da div "hero"*/
+  /*ATENÇÃO!!! Para corrigir este alinhamento na página é utilizado a "margem" que possui varias variações, pórem para alinha-las ao centro, podemos utilizar a "auto" que quer dizer automatica, igualando a margem em ambos os lados direito e esquerdo. Sem que haja especificação ele não altera em cima e embaixo*/
+  /*A especificação funciona da seguite forma
+  Caso haja dois termos - 32px auto = o primeiro será para alterar a margem top e bottom (cima e inferior) e o segundo termo as laterais seriam igualadas em margem
+  Caso haja 3 termos - 32px auto 72px = o primeiro termo será para top (cima), o segundo será para as laterais (igualando as margens) e o terceiro será para bottom
+  Casa haja 4 termos - 0 32px 72px 32px = funcionario como um relogio no sentido horario = o primeiro termo seria para top, o segundo seria para rigth (direira) o terceiro seria para bottom e o quarto seria para left (esquerda)
+  Desta forma você está utilizando uma boa prática em programação - chamada "short hand" = forma abreviado
+  Ao invez de utilizar
+  margin-top:0;
+  margin-rigth:32px;
+  margin-bottom:72px;
+  margin-left:32px;*/
+}
+
+#hero img {
+  margin-bottom: 72px; /*A margem inferior da imagem da div "hero" é de 72px*/
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  /*Familia da fonte - que veio como regraa a ser utilizada no google fonts*/
+  color: #000000;
+  /*Cor*/
+  font-size: 49px;
+  /*Tamanho da fonte*/
+  line-height: 56px;
+  /*Altura da linha*/
+  font-weight: normal;
+  /*Espessura da fonte, vale salientar que por padrão o h1 já é bold, então para alterar isso é necessário mexer no CSS e colocar um atributo*/
+  margin-bottom: 32px; /*A margem do Titulo da Div "hero" tem a margem inferior de 32px*/
+}
+
+h1 span {
+  /*Estou entrando dentro do span que está no h1, é tipo a especificidade em cascata, mas e pelo elemento que fica a frente*/
+  font-weight: bold;
+  /*Espessura da fonte em negrito*/
+}
+
+span,
+a {
+  color: #ff9900;
+}
+
+p,
+#footer {
+  color: #7d7987;
+  font-size: 14px; /*Tamanho da fonte de acordo como figma é especifico para o paragrafo*/
+  line-height: 28px; /*A altura da linha de acordo com o figma é mais espaçada entre elas*/
+  /*margin-bottom: 72px; A margem inferior dos paragrafos que estão dentro da Div "hero" são de 72 px - INUTILIZADO!!!*/
+}
+
+#footer a + a {
+  /*Pegue tag "a" anterior a ultima, neste caso é a primeira, pórem com mais de dois elementos a especificação fica continua, ou seja ela será aplicada a todos os "a" anteriores ao ultimo, sendo que no primeiro a especificação termina e não será aplicado nenhuma configuração*/
+  margin-left: 28px; /*Desta forma não fica correto o alinhamento, pois adcionou aos dois botões uma margem esquerda de 28px, fazendo com que fique descentralizado, sendo solucionado pela especificação "a + a" onde a configuração termina no primeiro elemento e para*/
+  /*OBSERVAÇÃO nesta caso em espefico não seria necessario utilizar a especificação "#footer = a Div footer", pois no código só existem tags "a" no footer, pórem como boa pratica de programação se torna interessante, para caso o cógigo se torne extenso e seja mais pratico de se buscar a especificação de cada bloco*/
+}
+
+#line {
+  /*A Div "line" especificada que está dentro da Div "footer"*/
+  width: 568px; /*Largura da linha*/
+  height: 0; /*Altura da linha, ao se aplicar a altura com valor zero a linha ficaria invisivel, pórem este problema é resolvido ao se usar o atributo "border"*/
+
+  margin: 0 auto 8px; /*Permite que a linha fique centralizada ao igual as margens laterais*/
+
+  border: 1px solid #eceff2;
+  /*A propiedade "solid" = sólido deixa a borda continua sem falhas
+  Se utilizar "dashed" = tracejada, a borda fica pontilhada
+  1px= a largura da borda da linha
+  #eceff2 é a cor da linha em hexadecimal= conjunto de 6 caracateres alfanúmericos */
+}
+
+#balls {
+  position: fixed; /*Posicionamento Fixo na tela - "position" habilita novas propriedade (como: top
+  IMPORTANTE!!! lembra que ao adcionar o position cria-se uma nova dimensão/camadas na página da WEB podendo ser sobreposta ou ficar submersa - como folhas de papel uma em cima da outra
+  Outros tipos de "position" são eles - absolute = absoluto
+  relative = relativo
+  static = estatico - é por padrão, mas muito pouco usual
+  sticky = que cola*/
+  bottom: 0px; /*Propriedade habilitada - bottom = inferior , ou seja a imagem ficará totalmente sobreposta na parte inferior da página*/
+  right: 0px; /*Totalmente a direita na página*/
+}
